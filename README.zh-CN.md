@@ -12,6 +12,7 @@
 | 创始人要提前准备哪些物料和基础信息（结构化 / 非结构化） | `templates/product.yaml`（结构化，脚本可校验）、`templates/founder-notes.md`（非结构化）、`docs/intake.md`；用 `scripts/check_intake.py` 做发布前闸门检查 |
 | 怎么让 agent 高效地操作 | `docs/playbook.md`（流程与效率规则）、`skills/launch-in-all-platforms/SKILL.md`、`docs/platform-families.md`（同一套建站模板 = 同一套流程）、`docs/agent-gotchas.md`、`scripts/agent/` |
 | 官网要加徽章，怎么高效做 | `docs/badges.md`；`scripts/badges.py render` 把所有徽章一次生成组件，一批只部署一次；`verify` 按平台爬虫的方式检查线上页面 |
+| 主流平台之间的流量 / 链接关系 | 洞察报告 `insights/2026-10-launch-platform-ecosystem.zh-CN.md`；原始数据 `data/link-graph.json` |
 | 经典回复模板 | `templates/replies.md`（24 个：给别人留言、自己产品页回复、拉票话术） |
 | 发布完怎么批量收集链接、维护 upvote | `docs/upvotes.md`；台账 `templates/listings.yaml`；`scripts/check_listings.py` 批量检查是否上线 / 票数；`scripts/upvote_kit.py` 生成"现在可投 / 发布日开放"的链接页、发布日日历（.ics）和分享文案 |
 

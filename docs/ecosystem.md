@@ -1,6 +1,6 @@
 # How launch platforms relate to each other
 
-_Snapshot 2026-10-06. Method: open each platform's homepage logged out, collect every link that points to another platform in the registry (badges, footers, "partners", "resources", "featured on" strips). 105 platforms, 980 links. Raw graph: [`data/link-graph.json`](../data/link-graph.json)._
+_Snapshot 2026-10-06. Method: open each platform's homepage logged out, collect every link that points to another platform in the registry (badges, footers, "partners", "resources", "featured on" strips). 105 platforms, 980 links. Raw graph: [`data/link-graph.json`](../data/link-graph.json). 中文洞察报告：[insights/2026-10-launch-platform-ecosystem.zh-CN.md](../insights/2026-10-launch-platform-ecosystem.zh-CN.md)._
 
 This is the **link network**, not measured visitor traffic. Real referral volumes need Similarweb / Ahrefs; the traffic numbers below are what platforms say about themselves.
 
