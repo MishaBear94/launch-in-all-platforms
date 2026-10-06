@@ -1,0 +1,504 @@
+product: dailyhook-ai
+product_name: DailyHook
+slug: dailyhook-ai
+site: https://dailyhook.top
+listings:
+- platform: launchaf
+  status: live
+  plan: free
+  launch_date: null
+  listing_url: https://launchaf.com/products/product-255
+  upvote: true
+  badge: null
+- platform: commune
+  status: live
+  plan: free
+  launch_date: '2026-10-05'
+  listing_url: https://commune.build/launch/dailyhook-ai
+  upvote: true
+  badge:
+    html: <a href="https://commune.build/launch/dailyhook-ai?utm_source=launch_badge&amp;utm_medium=referral&amp;utm_campaign=commune_launch" target="_blank" rel="noopener"><img src="https://cdn.commune.build/launch/commune-launch-badge-light-512.png" alt="Featured on Commune" width="256" height="65"></a>
+    required: false
+    rules: null
+- platform: saascity
+  status: live
+  plan: free
+  launch_date: null
+  listing_url: https://saascity.io/live/dailyhook-ai
+  upvote: true
+  badge:
+    html: <a href="https://saascity.io" target="_blank" rel="noopener"> <img src="https://saascity.io/badges/featured-light.svg" alt="Featured on SaaSCity" width="150" height="54" /> </a>
+    required: true
+    rules: null
+- platform: daniellaunches
+  status: live
+  plan: free
+  launch_date: '2026-10-06'
+  listing_url: https://daniellaunches.com/tools/dailyhook-ai
+  upvote: true
+  badge:
+    html: <a href="https://daniellaunches.com" target="_blank"> <img src="https://daniellaunches.com/badge-light.svg" alt="Featured on DanielLaunches" width="220" height="48" /> </a>
+    required: true
+    rules: null
+- platform: fazier
+  status: live
+  plan: free
+  launch_date: null
+  listing_url: https://fazier.com/launches/dailyhook.top
+  upvote: true
+  badge: null
+- platform: turbo0
+  status: submitted
+  plan: free
+  launch_date: null
+  listing_url: https://turbo0.com/item/dailyhook-ai
+  upvote: true
+  badge:
+    html: '<a href="https://turbo0.com/item/dailyhook-ai" target="_blank" rel="noopener noreferrer"> <img src="https://img.turbo0.com/badge-listed-light.svg" alt="Listed on Turbo0" style="height: 54px; width: auto;" /> </a>'
+    required: true
+    rules: null
+- platform: productwatch
+  status: live
+  plan: free
+  launch_date: null
+  listing_url: https://productwatch.io/products/dailyhook-ai
+  upvote: true
+  badge: null
+- platform: launchlist
+  status: live
+  plan: free
+  launch_date: null
+  listing_url: https://launch-list.org/product/dailyhook-ai
+  upvote: true
+  badge:
+    html: <a href="https://launch-list.org/product/dailyhook-ai" target="_blank"><img src="https://launch-list.org/badges/svg/launch_list_badge_featured.svg" alt="Launch List Badge" style="height:50px" /></a>
+    required: true
+    rules: null
+- platform: launchllama
+  status: submitted
+  plan: free
+  launch_date: null
+  listing_url: https://tools.launchllama.co/products/dailyhook-ai
+  upvote: true
+  badge:
+    html: <a href="https://tools.launchllama.co/products/dailyhook-ai?utm_source=badge&utm_medium=referral" target="_blank" rel="noopener noreferrer"> <img src="https://tools.launchllama.co/featured-badge.png?v=2" alt="Featured on Launch Llama Tools" width="200" height="52" /> </a>
+    required: false
+    rules: null
+- platform: letslaunch
+  status: scheduled
+  plan: free
+  launch_date: '2026-10-12'
+  listing_url: https://letslaunch.today/product/dailyhook-ai
+  upvote: true
+  badge:
+    html: <a href="https://letslaunch.today/product/dailyhook-ai" target="_blank" rel="noopener"><img src="https://letslaunch.today/badge/dailyhook-ai.svg" alt="DailyHook AI on LetsLaunch" width="250" height="54" /></a>
+    required: true
+    rules: null
+- platform: kittylaunch
+  status: scheduled
+  plan: free
+  launch_date: '2026-11-30'
+  listing_url: https://kittylaunch.com/p/dailyhook
+  upvote: true
+  badge:
+    html: <a href="https://kittylaunch.com/p/dailyhook?utm_source=badge" target="_blank" rel="noopener"><img src="https://kittylaunch.com/api/public/badges/launch_badge.svg?style=pill&theme=light" width="296" alt="DailyHook — Verified by KittyLaunch" data-kittylaunch-badge="1" /></a>
+    required: true
+    rules: null
+- platform: startupfast
+  status: scheduled
+  plan: free
+  launch_date: '2026-10-25'
+  listing_url: https://www.startupfa.st/projects/dailyhook-ai
+  upvote: true
+  badge: null
+- platform: betterlaunch
+  status: scheduled
+  plan: free
+  launch_date: '2026-11-09'
+  listing_url: https://www.betterlaunch.co/product/dailyhook-ai
+  upvote: true
+  badge:
+    html: <a href="https://www.betterlaunch.co/product/dailyhook-ai"><img src="https://www.betterlaunch.co/badge-live-light.svg" alt="Better Launch" width="200" height="56"></a>
+    required: false
+    rules: null
+- platform: codehype
+  status: scheduled
+  plan: free
+  launch_date: '2026-11-30'
+  listing_url: https://codehype.ai/product/dailyhook-ai
+  upvote: true
+  badge: null
+- platform: scrolllaunch
+  status: scheduled
+  plan: free
+  launch_date: '2026-12-07'
+  listing_url: https://www.scrolllaunch.com/products/dailyhook-ai
+  upvote: true
+  badge:
+    html: <a href="https://www.scrolllaunch.com/products/dailyhook-ai?ref=badge" target="_blank" rel="noopener"> <img src="https://www.scrolllaunch.com/api/badge/dailyhook-ai" alt="Featured on ScrollLaunch" width="220" height="48" loading="lazy" /> </a>
+    required: true
+    rules: keep ?ref=badge; rel=noopener only
+- platform: shipboost
+  status: scheduled
+  plan: free
+  launch_date: '2027-01-25'
+  listing_url: https://shipboost.io/tools/dailyhook-ai
+  upvote: true
+  badge:
+    html: <a href="https://shipboost.io/tools/dailyhook-ai" data-shipboost-badge="free-launch" target="_blank" rel="noopener"> <img src="https://shipboost.io/badge/cmuvhfih70001qw0sscbs76z4?theme=light" alt="Featured on ShipBoost" width="244" height="56" style="width:244px;height:56px;" /> </a>
+    required: true
+    rules: null
+- platform: auraplusplus
+  status: scheduled
+  plan: free
+  launch_date: '2027-10-06'
+  listing_url: https://auraplusplus.com/projects/dailyhook-ai
+  upvote: true
+  badge:
+    html: <a href="https://auraplusplus.com/projects/dailyhook-ai" target="_blank" rel="noopener" title="View this project on Aura++"> <img src="https://auraplusplus.com/images/badges/featured-on-light.svg" alt="Featured on Aura++" width="265" height="58" /> </a>
+    required: true
+    rules: null
+- platform: startupbase
+  status: submitted
+  plan: free
+  launch_date: null
+  listing_url: https://startupbase.io/products/dailyhook-ai
+  upvote: true
+  badge:
+    html: <a href="https://startupbase.io/products/dailyhook-ai?utm_source=startupbase&utm_medium=badge&utm_campaign=launch-badge-light" target="_blank" rel="noopener noreferrer"> <img src="https://statics.startupbase.io/site/badges/launched-on-sb.svg" alt="Launched on StartupBase" height="55" style="height:55px;width:auto;"
+      /> </a>
+    required: false
+    rules: null
+- platform: shinylaunch
+  status: scheduled
+  plan: free
+  launch_date: '2026-10-12'
+  listing_url: null
+  upvote: true
+  badge: null
+- platform: maidensail
+  status: submitted
+  plan: free
+  launch_date: '2026-10-19'
+  listing_url: null
+  upvote: true
+  badge:
+    html: <a href="https://maidensail.com/startup/dailyhook-ai" rel="dofollow"><img src="https://maidensail.com/badge/dailyhook-ai.svg" alt="Featured on Maidensail" height="44"></a>
+    required: true
+    rules: null
+- platform: launchigniter
+  status: scheduled
+  plan: free
+  launch_date: '2027-03-08'
+  listing_url: null
+  upvote: true
+  badge:
+    html: <a href="https://launchigniter.com/product/dailyhook-ai?ref=badge-dailyhook-ai" target="_blank"> <img src="https://launchigniter.com/api/badge/dailyhook-ai?theme=light" alt="Featured on LaunchIgniter" width="212" height="55" /> </a>
+    required: true
+    rules: null
+- platform: openhunts
+  status: submitted
+  plan: free
+  launch_date: null
+  listing_url: null
+  upvote: true
+  badge:
+    html: '<a href="https://openhunts.com" target="_blank" rel="noopener noreferrer" title="OpenHunts Club"><img alt="OpenHunts Club Member" width="486" height="105" src="https://cdn.openhunts.com/badges/club.webp" style="width: 195px; height: auto;"></a>'
+    required: true
+    rules: null
+- platform: stackledge
+  status: submitted
+  plan: free
+  launch_date: null
+  listing_url: null
+  upvote: true
+  badge: null
+- platform: toolrain
+  status: live
+  plan: free
+  launch_date: null
+  listing_url: https://toolrain.com/item/dailyhook-ai
+  upvote: false
+  badge: null
+- platform: neeed
+  status: live
+  plan: free
+  launch_date: null
+  listing_url: https://neeed.directory/products/dailyhook-ai
+  upvote: false
+  badge: null
+- platform: aitoolfame
+  status: submitted
+  plan: free
+  launch_date: null
+  listing_url: https://aitoolfame.com/item/dailyhook-ai
+  upvote: false
+  badge:
+    html: '<a href="https://aitoolfame.com/item/dailyhook-ai" target="_blank" rel="noopener noreferrer"> <img src="https://aitoolfame.com/badge-light.svg" alt="Featured on aitoolfame.com" style="height: 54px; width: auto;" /> </a>'
+    required: true
+    rules: null
+- platform: aihuntlist
+  status: submitted
+  plan: free
+  launch_date: null
+  listing_url: https://aihuntlist.com/tool/dailyhook-ai
+  upvote: false
+  badge:
+    html: '<a href="https://aihuntlist.com/tool/dailyhook-ai" target="_blank" rel="noopener noreferrer"> <img src="https://aihuntlist.com/badge-light.svg" alt="Featured on aihuntlist.com" style="height: 54px; width: auto;" /> </a>'
+    required: true
+    rules: null
+- platform: newtool
+  status: submitted
+  plan: free
+  launch_date: null
+  listing_url: https://newtool.site/item/dailyhook-ai
+  upvote: false
+  badge:
+    html: <a href="https://newtool.site/item/dailyhook-ai" target="_blank" rel="noopener noreferrer"> <img src="https://newtool.site/badges/newtool-light.svg" alt="Featured on NewTool.site" height = "54px" width = "auto" /> </a>
+    required: true
+    rules: null
+- platform: twelvetools
+  status: live
+  plan: free
+  launch_date: null
+  listing_url: https://twelve.tools/dailyhook-top
+  upvote: false
+  badge:
+    html: <a href="https://twelve.tools" target="_blank"><img src="https://twelve.tools/badge1-light.svg" alt="Featured on Twelve Tools" width="148" height="40"></a>
+    required: true
+    rules: null
+- platform: wiredbusiness
+  status: live
+  plan: free
+  launch_date: null
+  listing_url: https://wired.business/dailyhook-top
+  upvote: false
+  badge:
+    html: <a href="https://wired.business" target="_blank"><img src="https://wired.business/badge0-light.svg" alt="Featured on Wired Business" width="200" height="54"></a>
+    required: true
+    rules: null
+- platform: easylaunch
+  status: live
+  plan: free
+  launch_date: null
+  listing_url: https://easylaunch.dev/marketing/dailyhook-ai
+  upvote: false
+  badge:
+    html: <a href="https://easylaunch.dev/marketing/dailyhook-ai" target="_blank" rel="noopener"><img src="https://easylaunch.dev/badge/easylaunch-badge-light.svg" alt="Featured on EasyLaunch" width="188" height="56" /></a>
+    required: true
+    rules: null
+- platform: easydofollow
+  status: live
+  plan: free
+  launch_date: null
+  listing_url: https://easydofollow.dev/marketing/dailyhook-ai
+  upvote: false
+  badge: null
+- platform: lemonlaunch
+  status: live
+  plan: free
+  launch_date: null
+  listing_url: https://lemonlaunch.dev/marketing/dailyhook-ai
+  upvote: false
+  badge: null
+- platform: dododirectory
+  status: submitted
+  plan: free
+  launch_date: null
+  listing_url: https://dododirectory.com/item/dailyhook-ai
+  upvote: false
+  badge:
+    html: <a href="https://dododirectory.com" target="_blank" rel="dofollow"><img src="https://dododirectory.com/badge-light.png" alt="Featured on DodoDirectory" width="200" height="54" /></a>
+    required: true
+    rules: null
+- platform: tinyshelf
+  status: live
+  plan: free
+  launch_date: null
+  listing_url: https://www.tinyshelf.co/tools/dailyhook-ai
+  upvote: false
+  badge:
+    html: <a href="https://www.tinyshelf.co/?ref=dailyhook.top" title="Featured on TinyShelf"><img src="https://www.tinyshelf.co/badge/tinyshelf-badge-light-5ca4026a.svg" alt="Featured on TinyShelf" width="216" height="64"/></a>
+    required: true
+    rules: null
+- platform: startuptrusted
+  status: submitted
+  plan: free
+  launch_date: null
+  listing_url: null
+  upvote: false
+  badge:
+    html: <a href="https://startuptrusted.com?ref=dailyhook.top" target="_blank" rel="noopener"> <img src="https://startuptrusted.com/api/badge?type=featured&style=light" alt="DailyHook AI on StartupTrusted" width="240" height="54" /> </a>
+    required: true
+    rules: null
+- platform: cloutstack
+  status: submitted
+  plan: free
+  launch_date: null
+  listing_url: null
+  upvote: false
+  badge:
+    html: <a target="_blank" href="https://cloutstack.net/tool/dailyhook-ai"><img src="https://cloutstack.net/badge/badge.png" alt="Featured on CloutStack" height="54" loading="lazy"></a>
+    required: true
+    rules: no rel attribute
+- platform: saasgrow
+  status: submitted
+  plan: free
+  launch_date: null
+  listing_url: null
+  upvote: false
+  badge:
+    html: <a href="https://saasgrow.app?ref=dailyhook.top" target="_blank" rel="noopener"> <img src="https://saasgrow.app/api/badge?type=featured&style=light" alt="DailyHook AI on SaaSGrow" width="240" height="54" /> </a>
+    required: true
+    rules: null
+- platform: goodaitools
+  status: submitted
+  plan: free
+  launch_date: null
+  listing_url: null
+  upvote: false
+  badge: null
+- platform: weliketools
+  status: submitted
+  plan: free
+  launch_date: null
+  listing_url: null
+  upvote: false
+  badge: null
+- platform: unitelist
+  status: submitted
+  plan: free
+  launch_date: null
+  listing_url: null
+  upvote: false
+  badge: null
+- platform: trustiner
+  status: submitted
+  plan: free
+  launch_date: null
+  listing_url: null
+  upvote: false
+  badge: null
+- platform: acidtools
+  status: submitted
+  plan: free
+  launch_date: null
+  listing_url: null
+  upvote: false
+  badge: null
+- platform: startupbenchmarks
+  status: submitted
+  plan: free
+  launch_date: null
+  listing_url: null
+  upvote: false
+  badge: null
+- platform: thesaasdir
+  status: submitted
+  plan: free
+  launch_date: null
+  listing_url: null
+  upvote: false
+  badge:
+    html: <a href="https://thesaasdir.com/product/dailyhook-ai?ref=badge" rel="dofollow"><img src="https://thesaasdir.com/badge/dailyhook-ai.svg" alt="Featured on TheSaaSDir" width="182" height="46"></a>
+    required: true
+    rules: null
+- platform: submitaitools
+  status: submitted
+  plan: free
+  launch_date: null
+  listing_url: null
+  upvote: false
+  badge: null
+- platform: novatools
+  status: submitted
+  plan: free
+  launch_date: null
+  listing_url: null
+  upvote: false
+  badge:
+    html: <a href="https://novatools.ai" target="_blank"><img src="https://novatools.ai/images/badge.svg" alt="Listed on NovaTools" /></a>
+    required: true
+    rules: null
+- platform: launchpanda
+  status: removed
+  plan: free
+  launch_date: null
+  listing_url: null
+  upvote: true
+  badge: null
+  next_action: listing page 404 — check the dashboard
+- platform: nicklaunches
+  status: removed
+  plan: free
+  launch_date: null
+  listing_url: null
+  upvote: true
+  badge: null
+  next_action: listing page 404 — check the dashboard
+- platform: foundrlist
+  status: waiting_on_founder
+  plan: free
+  launch_date: null
+  listing_url: null
+  upvote: true
+  badge: null
+  next_action: free queue paused; retry after ~1 week
+- platform: dofollowtools
+  status: waiting_on_founder
+  plan: free
+  launch_date: null
+  listing_url: null
+  upvote: false
+  badge: null
+  next_action: daily free quota full; submit early in the UTC day
+- platform: smollaunch
+  status: waiting_on_founder
+  plan: free
+  launch_date: '2026-11-23'
+  listing_url: null
+  upvote: true
+  badge:
+    html: <a href="https://smollaunch.com" target="_blank" rel="noopener"> <img src="https://smollaunch.com/badges/featured.svg" alt="DailyHook AI — Featured on Smol Launch" loading="lazy" width="250" height="60" /> </a>
+    required: true
+    rules: null
+  next_action: 'founder: upvote 3 launches this week, then Submit'
+- platform: whatsthebigdata
+  status: waiting_on_founder
+  plan: free
+  launch_date: null
+  listing_url: null
+  upvote: false
+  badge:
+    html: <a href="https://whatsthebigdata.com/ai-tools/" target="_blank" rel="noopener" title="Whatsthebigdata AI Tools Directory"><img src="https://whatsthebigdata.com/badges/featured-on-whatsthebigdata-color.png" alt="Featured on Whatsthebigdata" width="240" style="max-width:100%;height:auto"/></a>
+    required: true
+    rules: null
+  next_action: 'founder: email hello@whatsthebigdata.com with listing details'
+- platform: listmysaas
+  status: skipped
+  plan: null
+  launch_date: null
+  listing_url: null
+  upvote: false
+  badge: null
+- platform: aidirectories
+  status: skipped
+  plan: null
+  launch_date: null
+  listing_url: null
+  upvote: false
+  badge: null
+- platform: toolfio
+  status: skipped
+  plan: null
+  launch_date: null
+  listing_url: null
+  upvote: false
+  badge: null
+- platform: confettisaas
+  status: skipped
+  plan: null
+  launch_date: null
+  listing_url: null
+  upvote: false
+  badge: null

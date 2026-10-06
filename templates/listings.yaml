@@ -1,0 +1,27 @@
+# Per-product launch ledger — the single source of truth after submission.
+# One entry per platform. The agent appends/updates an entry right after each platform;
+# scripts/check_listings.py refreshes `live`, `votes` and `checked` from the public pages;
+# scripts/badges.py reads `badge` to build and verify the site's "Featured on" block;
+# scripts/upvote_kit.py turns it into a shareable upvote page and a launch-day calendar.
+
+product: acme
+site: https://acme.example
+
+listings:
+  - platform: fazier                 # id from data/platforms.yaml
+    status: submitted                # submitted | scheduled | live | waiting_on_founder | skipped | removed
+    plan: free
+    launch_date: 2026-11-09          # when votes start counting / listing goes live (null = live now or unknown)
+    listing_url: https://fazier.com/launches/acme.example
+    upvote: true                     # page has a vote button (now or at launch)
+    badge:                           # null if the platform needs no badge
+      required: true                 # false = optional (dofollow / priority only)
+      html: '<a href="https://fazier.com/launches/acme.example" target="_blank"><img src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=launched&theme=light" alt="Fazier badge" width="120" height="51"/></a>'
+      rules: null                    # e.g. "no rel attribute", "keep ?ref=badge"
+      verified: true
+    next_action: null                # what the founder must do, with URL
+    manage_url: null                 # private edit links some platforms give once (save them!)
+    # filled by scripts:
+    live: null
+    votes: null
+    checked: null

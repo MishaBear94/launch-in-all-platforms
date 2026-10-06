@@ -1,0 +1,173 @@
+identity:
+  login_email: founder@example.com
+  maker_name: Misha
+  username: misha
+  headline: Founder of DailyHook AI
+  bio: Building DailyHook AI, which turns industry news into sourced, product-relevant marketing hooks.
+  x_handle: Misha4Ai
+  linkedin: null
+  avatar: null
+  country: null
+  co_makers: []
+  product_socials:
+    x: null
+    linkedin: null
+    github: null
+    discord: null
+product:
+  name: DailyHook AI
+  slug: dailyhook-ai
+  url: https://dailyhook.top
+  type: SaaS
+  platforms:
+  - Web
+  open_source: false
+  vibe_coded: false
+  nsfw_or_restricted: false
+  stage: pre-revenue
+  intent: neither
+  founded_year: 2026
+  tech_stack:
+  - Next.js
+  - TypeScript
+  - Node.js
+  - PostgreSQL
+  data_export: null
+  domain_rating: 0
+pricing:
+  model: freemium
+  cheapest_paid: 9
+  free_trial_days: 0
+  billing: monthly
+  plans:
+  - name: Free
+    price: 0
+    period: month
+    features:
+    - 2 research refreshes a week
+  - name: Standard
+    price: 9
+    period: month
+    features:
+    - 1 research refresh every day
+  - name: Enterprise
+    price: 59
+    period: month
+    features:
+    - Up to 10 refreshes a day
+    - Bring your own AI account
+  promo_code: null
+copy:
+  tagline_40: Marketing hooks from industry news
+  tagline_60: Turn industry news into your next marketing hook
+  tagline_80: Turn industry news into sourced, product-relevant marketing hooks
+  one_liner_150: Turn industry news into product-relevant marketing hooks. DailyHook AI researches your market and delivers sourced briefs for founders, marketers and.
+  meta_120_170: Turn industry news into product-relevant marketing hooks. DailyHook AI researches your market and delivers sourced briefs for founders, marketers and AI agents.
+  short_300: 'DailyHook AI turns what''s happening in your industry into marketing opportunities for your product. Start with your website: it builds product knowledge, watches for relevant news, skips
+    stories you''ve already covered, and delivers sourced briefs your team or AI agent can build on.'
+  long_600: 'DailyHook AI turns what''s happening in your industry into marketing opportunities for your product. Start with your website: it builds product knowledge, watches for relevant news, skips stories
+    you''ve already covered, and delivers sourced briefs your team or AI agent can build on. Free to start: 2 research refreshes a week.'
+  long_1000: 'Less news anxiety. More growth opportunities.
+
+
+    DailyHook AI is GTM infrastructure for the AI era. It combines industry news with what it knows about your product and turns them into marketing hooks: a specific event, the angle for a specific audience,
+    how your product connects to it, the argument to develop, and the evidence to add before publishing.
+
+
+    How it works:
+
+    1. Start with your website. DailyHook AI builds your product knowledge. You can add documents, correct facts and tell it what matters.
+
+    2. New research on your schedule. It looks for relevant changes in your market and skips events already delivered for your product.
+
+    3. Take the brief into your workflow. Every hook comes with sources and reasoning. Your writer or agent adds your voice.'
+  long_1100: 'Less news anxiety. More growth opportunities.
+
+
+    DailyHook AI is GTM infrastructure for the AI era. It combines industry news with what it knows about your product and turns them into marketing hooks: a specific event, the angle for a specific audience,
+    how your product connects to it, the argument to develop, and the evidence to add before publishing.
+
+
+    How it works:
+
+    1. Start with your website. DailyHook AI builds your product knowledge. You can add documents, correct facts and tell it what matters.
+
+    2. New research on your schedule. It looks for relevant changes in your market and skips events already delivered for your product.
+
+    3. Take the brief into your workflow. Every hook comes with sources and reasoning. Your writer or agent adds your voice.
+
+
+    Why not just ask a chatbot? A chat can find a story once. DailyHook AI keeps the product context and the recurring workflow around it: product knowledge and team directions stay with the product, and
+    delivered stories are recorded so you don''t repeat yourself. It works alongside your agent rather than replacing it.
+
+
+    Free to start: 2 research refreshes a week.'
+  who_for: Founders, marketers and teams running AI agents for marketing.
+  problem: ''
+  solution: ''
+  unique: ''
+  features:
+  - Product knowledge built from your website, editable by your team
+  - Scheduled research on industry news relevant to your product
+  - Marketing hooks with audience, angle, product connection and argument
+  - Sources and reasoning attached to every brief
+  - Stories already delivered to your product are skipped
+  - Briefs ready for your team or AI agents
+  use_cases: []
+  faq: []
+  alternatives: []
+  categories:
+  - Marketing
+  - AI
+  - Content Marketing
+  - Productivity
+  tags:
+  - marketing hooks
+  - content marketing
+  - AI agents
+  - industry news
+  - GTM
+  keywords: []
+  audience:
+  - Founders
+  - Marketers
+  - Content Marketers
+  - Copywriters
+  maker_comment_200: Built DailyHook AI to turn industry news into sourced marketing hooks for your product. Free to try with 2 refreshes a week. Feedback welcome!
+  maker_comment_500: 'Hi everyone, I built DailyHook AI because keeping up with industry news was making me anxious rather than useful. Every day there''s a new model, a new launch, a new policy, and the
+    real question is: does any of this give my product something worth saying? It''s free to try with 2 research refreshes a week.'
+  maker_comment_1000: 'Hi everyone, I built DailyHook AI because keeping up with industry news was making me anxious rather than useful. Every day there''s a new model, a new launch, a new policy, and the
+    real question is: does any of this give my product something worth saying?
+
+
+    DailyHook AI starts from your website, learns what your product does, and watches the news for you. When something relevant happens, it writes a brief: the event, who it matters to, how your product
+    connects, and what evidence you''d need before publishing. It remembers what it already sent you, so you don''t get the same story twice.
+
+
+    It''s free to try with 2 research refreshes a week. I''d love feedback on whether the hooks feel specific to your product, and what you''d want your agent to do with them.'
+  thank_you_280: Thanks for the upvote! DailyHook AI is free to try with 2 research refreshes a week.
+  autofill_traps:
+  - '"researches every morning / daily": free plan refreshes 2× per week'
+  - '"up to 10 hooks a day": that is the Enterprise refresh limit, not hooks'
+  - '"enterprise plans" with invented features'
+media:
+  logo_512: assets/logo-512.png
+  cover_1200x630: assets/cover.png
+  screenshots:
+  - assets/console.jpg
+  banner_2400x400: null
+  demo_video: null
+  public_urls:
+    logo: https://dailyhook.top/brand/logo-mark.png
+    cover: https://dailyhook.top/brand/dailyhook-ai-social-v1.png
+launch_rules:
+  free_only: true
+  date: earliest_free
+  newsletter_opt_in: only_if_required
+  site:
+    repo: github.com/MishaBear94/dailyhook-ai
+    branch: insforge
+    badge_file: apps/web/src/components/marketing/featured-on.tsx
+    deploy: node scripts/insforge/deploy.mjs --only web
+    badge_theme: light
+  browser: ego-lite

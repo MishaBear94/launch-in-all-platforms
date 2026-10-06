@@ -1,0 +1,97 @@
+# Founder intake — structured part. Fill once; every launch form becomes copy-paste.
+# Lengths come from the strictest limits seen across ~70 platforms (see docs/intake.md).
+# Priority: P0 = blocks submission, P1 = most forms / much better listings, P2 = a few platforms.
+# Who: [agent] = derive from your site/repo then confirm, [founder] = only you can answer.
+
+identity:                      # P0
+  login_email: you@example.com          # [founder] one Google account for every platform
+  maker_name: Jane Doe                  # [founder]
+  username: janedoe                     # [founder]
+  headline: Founder of Acme             # [agent→confirm] ≤60
+  bio: Building Acme, which ...         # [agent→confirm] ≤500
+  x_handle: janedoe                     # [founder] without @
+  linkedin: null                        # [founder] optional
+  avatar: assets/avatar-512.png         # P2
+  country: null                         # [founder] optional
+  co_makers: []                         # [founder] platform usernames or X handles
+  product_socials:                      # [founder] only accounts that exist
+    x: null
+    linkedin: null
+    github: null
+    discord: null
+
+product:                       # P0
+  name: Acme                            # ≤25 safest (some cap at 12–24)
+  slug: acme                            # lowercase-hyphen
+  url: https://acme.example             # canonical, no tracking params; often locked after submit
+  type: SaaS                            # SaaS | Software | Digital product | Extension | API
+  platforms: [Web]                      # [founder] only what actually ships: Web, iOS, Android, API, CLI, Desktop, Extension
+  open_source: false                    # [founder]
+  vibe_coded: false                     # [founder]
+  nsfw_or_restricted: false             # crypto / gambling / adult
+  stage: pre-revenue                    # [founder] P1: idea | pre-revenue | revenue | profitable
+  intent: neither                       # [founder] P1: acquisition | raising | neither
+  founded_year: 2026                    # [founder] P2
+  tech_stack: [Next.js, TypeScript]     # [agent] P1, real items only
+  data_export: null                     # [founder] P2: full | partial | none
+  domain_rating: 0                      # [agent] P1, check before starting: some free tiers need DR ≥ 10 / 20
+
+pricing:                       # P0 — must match the live pricing page
+  model: freemium                       # free | freemium | paid | subscription | one-time | free-trial | contact
+  cheapest_paid: 9                      # USD / month
+  free_trial_days: 0
+  billing: monthly
+  plans:
+    - {name: Free, price: 0, period: month, features: ["..."]}
+    - {name: Pro, price: 9, period: month, features: ["..."]}
+  promo_code: null                      # [founder] P2
+
+copy:                          # P0 unless marked — never claim what the site doesn't
+  tagline_40: ""
+  tagline_60: ""
+  tagline_80: ""
+  one_liner_150: ""                     # cards
+  meta_120_170: ""                      # SEO description fields
+  short_300: ""
+  long_600: ""
+  long_1000: ""
+  long_1100: ""                         # paragraphs + numbered "how it works"
+  who_for: ""                           # one line, ≥10 chars
+  problem: ""                           # P1
+  solution: ""                          # P1
+  unique: ""                            # P1
+  features: ["", "", "", "", "", ""]    # 6 × one line
+  use_cases: []                         # P1, 5–8
+  faq: []                               # P1, [{q: , a: }] ×4–6 — reuse the site's FAQ
+  alternatives: []                      # P1, [founder] real products only
+  categories: [Marketing, AI]           # ranked; pick closest per platform
+  tags: []                              # 5
+  keywords: []                          # P2, ≤10
+  audience: [Founders, Marketers]       # roles / professions
+  maker_comment_200: ""
+  maker_comment_500: ""
+  maker_comment_1000: ""
+  thank_you_280: ""                     # P2
+  autofill_traps: []                    # facts AI autofill gets wrong, e.g. "runs every morning" (actual: 2×/week on free)
+
+media:                         # P0 unless marked
+  logo_512: assets/logo-512.png         # 512×512 PNG <200 KB; keep an SVG too
+  cover_1200x630: assets/cover.png      # <1 MB
+  screenshots: [assets/shot-1.jpg]      # P1: 3 real screens, 1600 px wide JPG <500 KB
+  banner_2400x400: null                 # P2
+  demo_video: null                      # P1: YouTube / Loom URL
+  public_urls:                          # some forms only accept URLs
+    logo: https://acme.example/logo.png
+    cover: https://acme.example/og.png
+
+launch_rules:                  # P0
+  free_only: true
+  date: earliest_free                   # avoid "random date" options
+  newsletter_opt_in: only_if_required
+  site:                                 # where badges go — required by most free tiers
+    repo: git@github.com:you/acme.git
+    branch: main
+    badge_file: src/components/featured-on.tsx
+    deploy: "npm run deploy"
+    badge_theme: light
+  browser: ego-lite                     # must hold the logged-in sessions

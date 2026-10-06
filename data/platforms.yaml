@@ -1,0 +1,520 @@
+# Launch platforms and startup directories.
+#
+# Observed while submitting one SaaS product to ~70 of these in October 2026.
+# Platforms change their rules often: treat every entry as "last seen on <verified>" and
+# update it when a form looks different. PRs welcome.
+#
+# Fields
+#   id            stable key
+#   name, url     platform name and homepage
+#   submit        submit / new-product URL
+#   login         sign-in methods: google | github | email_link | password | apple | shop | none
+#   family        shared software/template, see docs/platform-families.md (same family = same agent flow)
+#   kind          launch (weekly/daily board with votes) | directory (listing only) | hybrid
+#   free          null when there is no free tier, otherwise:
+#     requires    badge | badge_optional (dofollow/priority only) | upvotes:N | comments:N | review | newsletter | dr_min:N
+#     wait        typical wait / queue for the free tier
+#   paid          cheapest paid option seen (USD, one-time unless noted)
+#   votes         now | at_launch | none   (does the public product page take upvotes)
+#   listing       public listing URL pattern ({slug})
+#   badge_rules   anything special about the badge link
+#   notes         what tripped the agent
+#   verified      date last checked
+
+- id: producthunt
+  name: Product Hunt
+  url: https://www.producthunt.com
+  kind: launch
+  login: [google, github, apple, email_link]
+  free: {requires: [review], wait: "pick a day"}
+  paid: null
+  votes: at_launch
+  notes: "The reference platform; launch day needs a hunter/maker plan. Not part of the automated batch — plan it separately."
+  verified: null
+
+- id: fazier
+  name: Fazier
+  url: https://fazier.com
+  submit: https://fazier.com/submit
+  login: [google, email_link]
+  kind: launch
+  free: {requires: [comments:3, badge], wait: "reviewed within 30 days"}
+  paid: "$29 Lite / $49 Premium"
+  votes: now
+  listing: https://fazier.com/launches/{domain}
+  notes: "Free path: leave 3 thoughtful comments on other products (human), add badge, tick conditions, Verify Badge."
+  verified: 2026-10-06
+
+- id: openhunts
+  name: OpenHunts
+  url: https://openhunts.com
+  submit: https://openhunts.com/projects/submit
+  login: [google, github, password]
+  kind: launch
+  free: {requires: [badge_optional, review], wait: "~60 weeks without badge; badge skips the queue"}
+  paid: "$9.9 Premium"
+  votes: at_launch
+  listing: https://openhunts.com/projects/{slug}
+  notes: "URL auto-fill fills everything incl. images. 'Add our badge to skip' dialog → Verify → Submit for review."
+  verified: 2026-10-05
+
+- id: shipboost
+  name: ShipBoost
+  url: https://shipboost.io
+  submit: https://shipboost.io/submit
+  login: [google, email_link, password]
+  kind: launch
+  free: {requires: [badge, upvotes:3], wait: "~16 weeks (next free week)"}
+  paid: "$19 Premium launch"
+  votes: at_launch
+  listing: https://shipboost.io/tools/{slug}
+  notes: "No autofill. Save product, then reopen the draft from the dashboard (?draft=) to schedule."
+  verified: 2026-10-06
+
+- id: turbo0
+  name: Turbo0
+  url: https://turbo0.com
+  submit: https://turbo0.com/submit
+  login: [google]
+  family: mkdirs
+  kind: directory
+  free: {requires: [badge, review], wait: "~2 weeks"}
+  paid: "$29.9"
+  votes: now
+  listing: https://turbo0.com/item/{slug}
+  verified: 2026-10-06
+
+- id: saascity
+  name: SaaSCity
+  url: https://saascity.io
+  submit: https://saascity.io/saascity
+  login: [google]
+  kind: hybrid
+  free: {requires: [badge], wait: "~8 months (first free launch Monday)"}
+  paid: "$19.99 Quick Pass"
+  votes: now
+  listing: https://saascity.io/live/{slug}
+  notes: "'Drop your link' wizard drafts in ~45s; it guessed social handles wrong."
+  verified: 2026-10-05
+
+- id: launchigniter
+  name: LaunchIgniter
+  url: https://launchigniter.com
+  submit: https://launchigniter.com/submit
+  login: [google]
+  kind: launch
+  free: {requires: [badge, review], wait: "~5 months (free weeks spaced out)"}
+  paid: "$12 Basic"
+  votes: at_launch
+  listing: https://launchigniter.com/product/{slug}
+  notes: "Complete-profile step first. Math CAPTCHA on submit (human). Then schedule page: Free → Verify Badge → Book → confirm."
+  verified: 2026-10-06
+
+- id: commune
+  name: Commune
+  url: https://commune.build
+  submit: https://commune.build/launches/submit
+  login: [google, email_link]
+  kind: launch
+  free: {requires: [review], wait: "current weekly cohort if slots"}
+  paid: "$29 one-off"
+  votes: now
+  listing: https://commune.build/launch/{slug}
+  notes: "Create a project first (costs in-site gold). Badge optional."
+  verified: 2026-10-06
+
+- id: stackledge
+  name: StackLedge
+  url: https://www.stackledge.com
+  submit: https://www.stackledge.com/submit
+  login: [google]
+  kind: directory
+  free: {requires: [upvotes:3, review], wait: "~24 days queue"}
+  paid: "$9 Featured"
+  votes: now
+  listing: https://www.stackledge.com/tools/{slug}
+  verified: 2026-10-06
+
+- id: startupbase
+  name: StartupBase
+  url: https://startupbase.io
+  submit: https://startupbase.io/submit
+  login: [google]
+  kind: launch
+  free: {requires: [upvotes:3, comments:1, badge_optional], wait: "4–10 weeks"}
+  paid: "$39"
+  votes: at_launch
+  listing: https://startupbase.io/products/{slug}
+  verified: 2026-10-06
+
+- id: startuptrusted
+  name: StartupTrusted
+  url: https://startuptrusted.com
+  submit: https://startuptrusted.com/submit
+  login: [google]
+  family: fetch-form
+  kind: directory
+  free: {requires: [badge, review]}
+  paid: "$11 Pro"
+  votes: none
+  badge_rules: "href https://startuptrusted.com?ref=<your-domain>"
+  verified: 2026-10-06
+
+- id: saasgrow
+  name: SaaSGrow
+  url: https://saasgrow.app
+  submit: https://saasgrow.app/submit
+  login: [google]
+  family: fetch-form
+  kind: directory
+  free: {requires: [badge, review]}
+  paid: "$9"
+  votes: none
+  verified: 2026-10-06
+
+- id: scrolllaunch
+  name: ScrollLaunch
+  url: https://www.scrolllaunch.com
+  submit: https://www.scrolllaunch.com/dashboard/products/new
+  login: [google]
+  kind: launch
+  free: {requires: [badge], wait: "~9 weeks (25 free slots/week)"}
+  paid: "$39 Premium"
+  votes: at_launch
+  listing: https://www.scrolllaunch.com/products/{slug}
+  badge_rules: "keep ?ref=badge; rel=noopener only; no UTM, no nofollow"
+  notes: "Premium is PRE-SELECTED — untick it to launch free."
+  verified: 2026-10-06
+
+- id: aihuntlist
+  name: aihuntlist
+  url: https://aihuntlist.com
+  submit: https://aihuntlist.com/submission/new
+  login: [google]
+  family: mkdirs
+  kind: directory
+  free: {requires: [badge, review], wait: "~1 week"}
+  paid: "$6.9 Fastpass"
+  votes: none
+  listing: https://aihuntlist.com/tool/{slug}
+  notes: "Google ad vignettes overlay buttons — remove ad iframes before clicking."
+  verified: 2026-10-06
+
+- id: daniellaunches
+  name: DanielLaunches
+  url: https://daniellaunches.com
+  submit: https://daniellaunches.com/submit
+  login: [google]
+  kind: launch
+  free: {requires: [badge], wait: "next day with organic slots"}
+  paid: "$9.99 Pro"
+  votes: now
+  listing: https://daniellaunches.com/tools/{slug}
+  verified: 2026-10-06
+
+- id: neeed
+  name: neeed.directory
+  url: https://neeed.directory
+  submit: https://neeed.directory/submit
+  login: [google]
+  kind: directory
+  free: {requires: [badge_optional], wait: "live immediately after automatic check"}
+  paid: "$19 Premium"
+  votes: none
+  listing: https://neeed.directory/products/{slug}
+  verified: 2026-10-06
+
+- id: launchllama
+  name: Launch Llama
+  url: https://tools.launchllama.co
+  submit: https://tools.launchllama.co/submit
+  login: [google]
+  kind: hybrid
+  free: {requires: [upvotes:5, comments:1, badge_optional, review], wait: "~4 weeks"}
+  paid: "$39 Instant Launch"
+  votes: now
+  listing: https://tools.launchllama.co/products/{slug}
+  notes: "AI prefill invents key features — replace. Untick 'Also list this on Launch MCP'."
+  verified: 2026-10-06
+
+- id: betterlaunch
+  name: Better Launch
+  url: https://www.betterlaunch.co
+  submit: https://www.betterlaunch.co/submit
+  login: [google, email_link]
+  kind: launch
+  free: {requires: [badge_optional], wait: "Mondays ≥30 days out"}
+  paid: "$19 Starter"
+  votes: at_launch
+  listing: https://www.betterlaunch.co/product/{slug}
+  notes: "Clerk login; Google sign-up sometimes needs two tries. Logo crop modal ('Use this logo')."
+  verified: 2026-10-06
+
+- id: aitoolfame
+  name: aitoolfame
+  url: https://aitoolfame.com
+  submit: https://aitoolfame.com/submit
+  login: [google]
+  family: mkdirs
+  kind: directory
+  free: {requires: [badge, review], wait: "up to 180 days"}
+  paid: "$6.9 Basic"
+  votes: none
+  listing: https://aitoolfame.com/item/{slug}
+  verified: 2026-10-06
+
+- id: toolfame
+  name: toolfame
+  url: https://toolfame.com
+  login: [google]
+  family: mkdirs
+  kind: directory
+  free: {requires: [badge, review]}
+  votes: none
+  verified: null
+
+- id: saasfame
+  name: saasfame
+  url: https://saasfame.com
+  login: [google]
+  family: mkdirs
+  kind: directory
+  free: {requires: [badge, review]}
+  votes: none
+  verified: null
+
+- id: toolrain
+  name: ToolRain
+  url: https://toolrain.com
+  login: [google]
+  family: mkdirs
+  kind: directory
+  free: {requires: [badge, review]}
+  votes: none
+  listing: https://toolrain.com/item/{slug}
+  verified: 2026-10-06
+
+- id: newtool
+  name: NewTool.site
+  url: https://newtool.site
+  submit: https://newtool.site/submit
+  login: [google]
+  family: mkdirs
+  kind: directory
+  free: {requires: [badge, review], wait: "~90 days"}
+  paid: "$9.9 Pro"
+  votes: none
+  listing: https://newtool.site/item/{slug}
+  verified: 2026-10-06
+
+- id: auraplusplus
+  name: Aura++
+  url: https://auraplusplus.com
+  submit: https://auraplusplus.com/projects/submit
+  login: [google]
+  family: open-launch
+  kind: launch
+  free: {requires: [badge], wait: "~12 months; date not changeable without upgrading"}
+  paid: "$29 Premium"
+  votes: at_launch
+  listing: https://auraplusplus.com/projects/{slug}
+  notes: "'Random date' put the launch a full year out — pick a date explicitly or skip."
+  verified: 2026-10-06
+
+- id: startupfast
+  name: Startup Fast
+  url: https://startupfa.st
+  submit: https://www.startupfa.st/projects/submit
+  login: [google]
+  family: open-launch
+  kind: launch
+  free: {requires: [badge], wait: "~3 weeks (5 free slots/day)"}
+  paid: "$19 Premium"
+  votes: at_launch
+  listing: https://www.startupfa.st/projects/{slug}
+  notes: "Choose 'Personal profile'. Tech stack required. Submit stays disabled until Verify Badge passes."
+  verified: 2026-10-06
+
+- id: cloutstack
+  name: CloutStack
+  url: https://cloutstack.net
+  submit: https://cloutstack.net/submit
+  login: [google]
+  kind: directory
+  free: {requires: [badge, review]}
+  paid: "$29"
+  votes: none
+  listing: https://cloutstack.net/tool/{slug}
+  badge_rules: "NO rel attribute at all"
+  verified: 2026-10-06
+
+- id: goodaitools
+  name: Good AI Tools
+  url: https://goodaitools.com
+  submit: https://goodaitools.com/get-started
+  login: [google]
+  family: get-started
+  kind: directory
+  free: {requires: [badge, review]}
+  votes: none
+  listing: https://goodaitools.com/ai/{slug}
+  badge_rules: "href must be the exact listing URL"
+  verified: 2026-10-06
+
+- {id: weliketools, name: We Like Tools, url: https://weliketools.com, login: [google], family: get-started, kind: directory, free: {requires: [badge, review]}, votes: none, listing: "https://weliketools.com/tool/{slug}", verified: 2026-10-06}
+- {id: unitelist, name: Unite List, url: https://unitelist.com, login: [google], family: get-started, kind: directory, free: {requires: [badge, review]}, votes: none, listing: "https://unitelist.com/product/{slug}", verified: 2026-10-06}
+- {id: trustiner, name: Trustiner, url: https://trustiner.com, login: [google], family: get-started, kind: directory, free: {requires: [badge, review]}, votes: none, listing: "https://trustiner.com/product/{slug}", verified: 2026-10-06}
+- {id: acidtools, name: Acid Tools, url: https://acidtools.com, login: [google], family: get-started, kind: directory, free: {requires: [badge, review]}, votes: none, listing: "https://acidtools.com/ai/{slug}", verified: 2026-10-06}
+- {id: startupbenchmarks, name: Startup Benchmarks, url: https://startupbenchmarks.com, login: [google], family: get-started, kind: directory, free: {requires: [badge, review]}, votes: none, listing: "https://startupbenchmarks.com/product/{slug}", verified: 2026-10-06}
+- {id: shinylaunch, name: ShinyLaunch, url: https://shinylaunch.com, login: [google], family: get-started, kind: launch, free: {requires: [badge, review], wait: "next weekly slot"}, votes: at_launch, listing: "https://shinylaunch.com/product/{slug}", notes: "Same as get-started family plus a required launch-week select.", verified: 2026-10-06}
+
+- id: submitaitools
+  name: Submit AI Tools
+  url: https://submitaitools.org
+  submit: https://submitaitools.org/dashboard/submit/?plan=free
+  login: [google]
+  kind: directory
+  free: {requires: [badge, newsletter, review], wait: "≤5 business days"}
+  paid: "$19 Basic"
+  votes: none
+  notes: "Verify badge link first; required 'Suitable for jobs' checklist; free plan requires newsletter opt-in."
+  verified: 2026-10-06
+
+- {id: twelvetools, name: Twelve Tools, url: https://twelve.tools, submit: "https://twelve.tools/submit", login: [none], family: twelve, kind: directory, free: {requires: [badge], wait: "live instantly after verify"}, paid: "$36", votes: none, listing: "https://twelve.tools/{domain-slug}", notes: "Save the private /edit?hash= link — it's the only way to manage the listing.", verified: 2026-10-06}
+- {id: wiredbusiness, name: Wired Business, url: https://wired.business, submit: "https://wired.business/submit", login: [none], family: twelve, kind: directory, free: {requires: [badge], wait: "live instantly after verify"}, paid: "$29", votes: none, listing: "https://wired.business/{domain-slug}", verified: 2026-10-06}
+- {id: easylaunch, name: EasyLaunch, url: https://easylaunch.dev, login: [none], family: squeeze, kind: directory, free: {requires: [badge], wait: "live instantly after verify"}, paid: "$9", votes: none, listing: "https://easylaunch.dev/{category}/{slug}", verified: 2026-10-06}
+- {id: easydofollow, name: EasyDoFollow, url: https://easydofollow.dev, login: [none], family: squeeze, kind: directory, free: {requires: [badge], wait: "live instantly after verify"}, paid: "$9", votes: none, listing: "https://easydofollow.dev/{category}/{slug}", verified: 2026-10-06}
+- {id: lemonlaunch, name: LemonLaunch, url: https://lemonlaunch.dev, login: [none], family: squeeze, kind: directory, free: {requires: [badge], wait: "live instantly after verify"}, paid: "$9", votes: none, listing: "https://lemonlaunch.dev/{category}/{slug}", verified: 2026-10-06}
+- {id: dododirectory, name: DodoDirectory, url: https://dododirectory.com, submit: "https://dododirectory.com/submit", login: [none], family: mkdirs, kind: directory, free: {requires: [badge, review], wait: "~2 weeks"}, paid: "$9.99", votes: none, listing: "https://dododirectory.com/item/{slug}", notes: "Badge verified before the details form unlocks; intro editor is CodeMirror.", verified: 2026-10-06}
+- {id: thesaasdir, name: TheSaaSDir, url: https://thesaasdir.com, submit: "https://thesaasdir.com/submit/?tier=free", login: [none], kind: directory, free: {requires: [badge, review], wait: "≤7 days"}, paid: "$19", votes: none, listing: "https://thesaasdir.com/product/{slug}", verified: 2026-10-06}
+- {id: novatools, name: NovaTools, url: https://novatools.ai, submit: "https://novatools.ai/submit/", login: [none], kind: directory, free: {requires: [badge], wait: "batch reviews (waitlist)"}, paid: "$19.9", votes: none, verified: 2026-10-06}
+- {id: toolfio, name: Toolfio, url: https://toolfio.com, login: [none], kind: directory, free: {requires: [badge, "dr_min:20"]}, paid: "$18.99", votes: none, verified: 2026-10-06}
+
+- id: letslaunch
+  name: LetsLaunch
+  url: https://letslaunch.today
+  submit: https://letslaunch.today/submit
+  login: [google]
+  kind: launch
+  free: {requires: [badge], wait: "next week with free spots (20/week)"}
+  paid: "$9 Premium"
+  votes: now
+  listing: https://letslaunch.today/product/{slug}
+  notes: "Autofill drafts FAQ, plans, alternatives — check plan limits it invents."
+  verified: 2026-10-06
+
+- id: tinyshelf
+  name: TinyShelf
+  url: https://www.tinyshelf.co
+  submit: https://www.tinyshelf.co/submit
+  login: [google]
+  kind: directory
+  free: {requires: [badge], wait: "live on save (automatic review)"}
+  paid: "$19 (dofollow without badge)"
+  votes: none
+  listing: https://www.tinyshelf.co/tools/{slug}
+  notes: "Badge is checked at save time — deploy it first."
+  verified: 2026-10-06
+
+- id: launchlist
+  name: Launch List
+  url: https://www.launch-list.org
+  login: [google]
+  kind: launch
+  free: {requires: [upvotes:3, badge_optional]}
+  paid: "$9 Featured"
+  votes: now
+  listing: https://launch-list.org/product/{slug}
+  notes: "Submit form is an embedded Tally iframe — use snapshot refs. Description ≤1000 chars."
+  verified: 2026-10-06
+
+- id: maidensail
+  name: Maidensail
+  url: https://maidensail.com
+  submit: https://maidensail.com/submit/basics
+  login: [google]
+  kind: launch
+  free: {requires: [upvotes:4, badge, review], wait: "next week with berths"}
+  paid: "$9.99 Starter"
+  votes: at_launch
+  listing: https://maidensail.com/startup/{slug}
+  notes: "Asks stage (Idea/Pre-revenue/...) and intent (acquisition/raising) — answer honestly."
+  verified: 2026-10-06
+
+- id: kittylaunch
+  name: KittyLaunch
+  url: https://kittylaunch.com
+  login: [google]
+  kind: launch
+  free: {requires: [upvotes:3, badge], wait: "2+ weeks"}
+  paid: "$9 Skip the line"
+  votes: now
+  listing: https://kittylaunch.com/p/{slug}
+  notes: "Must upvote 3 products today before the form appears."
+  verified: 2026-10-06
+
+- id: productwatch
+  name: ProductWatch
+  url: https://productwatch.io
+  login: [google, github, email_link]
+  kind: launch
+  free: {requires: [badge_optional], wait: "30 days, or instant with badge"}
+  paid: "Priority Pass"
+  votes: now
+  listing: https://productwatch.io/products/{slug}
+  notes: "Onboarding asks 'how did you hear' (Other needs text). Name+link locked after confirm."
+  verified: 2026-10-06
+
+- id: foundrlist
+  name: FoundrList
+  url: https://www.foundrlist.com
+  login: [google, github, password]
+  kind: launch
+  free: {requires: [review], wait: "~4 weeks; free queue sometimes paused for a week"}
+  paid: "$29 Standard (discounts on exit)"
+  votes: now
+  notes: "Three escalating discount pop-ups before the free queue; last one may say free is paused."
+  verified: 2026-10-06
+
+- {id: dofollowtools, name: Dofollow.Tools, url: https://dofollow.tools, login: [google, github, email_link], family: dofollow-tools, kind: directory, free: {requires: [badge], wait: "7 days; only 5 free slots/day site-wide"}, paid: "$19", votes: none, notes: "Submit early in the UTC day. AI fill unreliable.", verified: 2026-10-06}
+- {id: deeplaunch, name: DeepLaunch, url: https://deeplaunch.io, login: [google, github, email_link], family: dofollow-tools, kind: directory, free: {requires: [badge], wait: "daily free quota"}, votes: none, verified: null}
+- {id: wayfindio, name: Wayfindio, url: https://wayfindio.com, login: [google], family: dofollow-tools, kind: directory, free: {requires: [badge], wait: "daily free quota"}, votes: none, verified: null}
+
+- {id: launchpanda, name: LaunchPanda, url: https://www.launchpanda.dev, login: [google, email_link], kind: launch, votes: now, notes: "Listing URL /launches/{category}/{slug}; check it stays live.", verified: 2026-10-06}
+- {id: nicklaunches, name: Nick Launches, url: https://nicklaunches.com, login: [google], kind: launch, votes: now, listing: "https://nicklaunches.com/products/{slug}/", verified: 2026-10-06}
+- {id: codehype, name: CodeHype, url: https://codehype.ai, login: [google, email_link], kind: launch, votes: at_launch, listing: "https://codehype.ai/product/{slug}", verified: 2026-10-06}
+- {id: launchaf, name: LaunchAF, url: https://launchaf.com, login: [google], kind: launch, votes: now, listing: "https://launchaf.com/products/product-{id}", verified: 2026-10-06}
+- {id: launchit, name: LaunchIt, url: https://launchit.fast, login: [google], kind: launch, votes: now, verified: null}
+
+# Platforms seen but not completed (needs verification)
+- {id: listmysaas, name: ListMySaaS, url: https://listmysaas.xyz, login: [google], kind: directory, free: {requires: [badge, "dr_min:10"]}, paid: "$14", verified: 2026-10-06}
+- {id: aidirectories, name: AI Directories, url: https://www.aidirectori.es, login: [google], kind: directory, free: {requires: [badge, "dr_min:10"]}, paid: "$49", notes: "reCAPTCHA before Google login.", verified: 2026-10-06}
+- {id: smollaunch, name: Smol Launch, url: https://smollaunch.com, login: [google], kind: launch, free: {requires: [upvotes:3, badge_optional]}, paid: "$19 Premium", votes: at_launch, notes: "'Free Verified' (dofollow) refuses DR-0 sites; Basic Free still lists.", verified: 2026-10-06}
+- {id: whatsthebigdata, name: Whatsthebigdata, url: https://whatsthebigdata.com, login: [email_link], kind: directory, free: {requires: [badge, "email the team"]}, paid: "$599", verified: 2026-10-06}
+- {id: confettisaas, name: ConfettiSaaS, url: https://confettisaas.com, login: [google], kind: directory, notes: "Only lists products with a confetti celebration moment.", verified: 2026-10-06}
+- {id: dangai, name: Dang.ai, url: https://dang.ai, login: [email_link], kind: directory, verified: 2026-10-06}
+- {id: yodirectory, name: Yo.directory, url: https://yo.directory, login: [email_link], kind: directory, verified: 2026-10-06}
+- {id: toolpilot, name: ToolPilot, url: https://www.toolpilot.ai, login: [shop], kind: directory, verified: 2026-10-06}
+- {id: indiehunt, name: IndieHunt, url: https://indiehunt.io, login: [google], kind: launch, verified: null}
+- {id: indietools, name: IndieTools, url: https://www.indietools.app, login: [google], kind: directory, notes: "Google login failed twice (unable_to_create_user).", verified: 2026-10-06}
+- {id: listbulb, name: ListBulb, url: https://www.listbulb.com, login: [google], kind: directory, notes: "Google login state_mismatch twice.", verified: 2026-10-06}
+- {id: dailypings, name: DailyPings, url: https://dailypings.com, kind: launch, notes: "Cloudflare challenge.", verified: 2026-10-06}
+- {id: startupfame, name: Startup Fame, url: https://startupfa.me, kind: directory, verified: null}
+- {id: vibecodinglist, name: VibeCodingList, url: https://vibecodinglist.com, login: [google, apple, email_link], kind: launch, verified: null}
+- {id: uno, name: Uno Directory, url: https://uno.directory, login: [google], kind: directory, verified: null}
+- {id: marketingdb, name: MarketingDB, url: https://marketingdb.live, login: [google, email_link], kind: directory, verified: null}
+- {id: aitooltrek, name: AI Tool Trek, url: https://aitooltrek.com, login: [google], kind: directory, verified: null}
+- {id: nxgntools, name: NxGn Tools, url: https://www.nxgntools.com, login: [google, email_link], kind: launch, verified: null}
+- {id: shipstry, name: Shipstry, url: https://shipstry.com, login: [google], kind: launch, verified: null}
+- {id: wonderlaunch, name: Wonderlaunch, url: https://wonderlaunch.app, login: [google], kind: launch, verified: null}
+- {id: founderbest, name: Founder.best, url: https://www.founder.best, login: [google], kind: launch, verified: null}
+- {id: submitforbacklinks, name: SubmitForBacklinks, url: https://submitforbacklinks.com, login: [google], kind: directory, verified: null}
+- {id: aatee, name: aat.ee, url: https://www.aat.ee, login: [google], kind: directory, verified: null}
+- {id: findly, name: Findly.tools, url: https://findly.tools, login: [google, github, password], kind: directory, verified: null}
+- {id: ufind, name: ufind.best, url: https://ufind.best, login: [google, github, password], kind: directory, verified: null}
+- {id: agentwork, name: AgentWork.Tools, url: https://agentwork.tools, login: [google], family: dofollow-tools, kind: directory, verified: null}
+- {id: submithunt, name: Submit Hunt, url: https://submithunt.com, login: [google], kind: launch, verified: null}
+- {id: bestsky, name: BestskyTools, url: https://bestsky.tools, login: [google], kind: directory, verified: null}
+- {id: directree, name: directree, url: https://www.directree.io, login: [google], kind: directory, verified: null}
+- {id: spacerrapps, name: SpacerrApps, url: https://spacerrapps.com, login: [google], kind: directory, verified: null}
+- {id: publishyoursaas, name: PublishYourSaaS, url: https://publishyoursaas.com, login: [google], kind: directory, verified: null}

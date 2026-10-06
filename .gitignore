@@ -1,0 +1,6 @@
+# your own launches stay private by default; examples/ is the public sample
+launches/
+out/
+__pycache__/
+*.pyc
+.DS_Store
