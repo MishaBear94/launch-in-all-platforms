@@ -11,6 +11,7 @@ Built from a real run: one SaaS product submitted to ~70 platforms in two days, 
 | You want to… | Use |
 |---|---|
 | Know **where** to launch: free vs paid, what the free tier requires (badge, upvotes, DR), wait times, whether listings take votes | [`data/platforms.yaml`](data/platforms.yaml) → [`docs/platforms.md`](docs/platforms.md) (89 platforms, 57 with a free tier) |
+| Understand how platforms **relate** (two tiers, the backlink mesh, hubs, clusters) | [`docs/ecosystem.md`](docs/ecosystem.md), [`data/link-graph.json`](data/link-graph.json) |
 | Know **what to prepare** before launching (structured + unstructured) | [`templates/product.yaml`](templates/product.yaml), [`templates/founder-notes.md`](templates/founder-notes.md), [`docs/intake.md`](docs/intake.md), every form field seen with its limits: [`docs/form-fields.md`](docs/form-fields.md); gate: `scripts/check_intake.py` |
 | Let an **agent** do the launch efficiently | [`docs/playbook.md`](docs/playbook.md), [`skills/launch-in-all-platforms/SKILL.md`](skills/launch-in-all-platforms/SKILL.md), [`docs/platform-families.md`](docs/platform-families.md), [`docs/agent-gotchas.md`](docs/agent-gotchas.md), `scripts/agent/` |
 | Add **badges** to your site without a deploy per platform | [`docs/badges.md`](docs/badges.md), `scripts/badges.py render / verify` |
