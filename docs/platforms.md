@@ -21,7 +21,7 @@ Legend — **requires**: what the free tier asks for. `badge` = their badge on y
 | [Dofollow.Tools](https://dofollow.tools) | directory | google, github, email_link | yes | badge | 7 days; only 5 free slots/day site-wide | $19 | none | dofollow-tools | 2026-10-06 |
 | [EasyDoFollow](https://easydofollow.dev) | directory | none | yes | badge | live instantly after verify | $9 | none | squeeze | 2026-10-06 |
 | [EasyLaunch](https://easylaunch.dev) | directory | none | yes | badge | live instantly after verify | $9 | none | squeeze | 2026-10-06 |
-| [Fazier](https://fazier.com) | launch | google, email_link | yes | comments:3, badge | reviewed within 30 days | $29 Lite / $49 Premium | now |  | 2026-10-06 |
+| [Fazier](https://fazier.com) | launch | google, email_link | yes | comments:3, badge | reviewed within 30 days | $29 Lite / $49 Premium | at_launch |  | 2026-10-06 |
 | [FoundrList](https://www.foundrlist.com) | launch | google, github, password | yes | review | ~4 weeks; free queue sometimes paused for a week | $29 Standard (discounts on exit) | now |  | 2026-10-06 |
 | [Good AI Tools](https://goodaitools.com) | directory | google | yes | badge, review |  |  | none | get-started | 2026-10-06 |
 | [KittyLaunch](https://kittylaunch.com) | launch | google | yes | upvotes:3, badge | 2+ weeks | $9 Skip the line | now |  | 2026-10-06 |

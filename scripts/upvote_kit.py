@@ -24,16 +24,19 @@ def main(path, out):
     def is_live(l):  # checked result wins; otherwise trust the recorded status
         return l['live'] if l.get('live') is not None else l.get('status') in ('live', 'submitted', 'scheduled')
     has_page = lambda l: bool(l.get('listing_url')) and is_live(l)
-    now = [l for l in L if l.get('upvote') and has_page(l) and (not date(l) or date(l) <= today)]
+    now = [l for l in L if l.get('upvote') is True and has_page(l) and (not date(l) or date(l) <= today)]
     later = sorted([l for l in L if l.get('upvote') and date(l) and date(l) > today], key=date)
+    waiting = [l for l in L if l.get('upvote') == 'at_launch' and not (date(l) and date(l) > today) and has_page(l)]
     listed = [l for l in L if not l.get('upvote') and has_page(l)]
-    pending = [l for l in L if l not in now + later + listed]
+    pending = [l for l in L if l not in now + later + listed + waiting]
 
     md = [f'# {name}: where to support it\n', f'_Updated {today}_\n']
     md.append('## Vote now\n')
     md += [f"- **{l['platform']}** — {l['listing_url']}" + (f" ({l['votes']} votes)" if l.get('votes') is not None else '') for l in now]
     md.append('\n## Opens on launch day\n')
     md += [f"- {date(l)} · **{l['platform']}** — {l.get('listing_url') or '(link when live)'}" for l in later]
+    md.append('\n## Page live, voting not open yet (date unknown)\n')
+    md += [f"- **{l['platform']}** — {l['listing_url']}" for l in waiting]
     md.append('\n## Listed (no voting)\n')
     md += [f"- {l['platform']} — {l['listing_url']}" for l in listed]
     md.append('\n## Pending review\n')

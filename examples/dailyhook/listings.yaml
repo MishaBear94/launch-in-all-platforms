@@ -41,12 +41,13 @@ listings:
     required: true
     rules: null
 - platform: fazier
-  status: live
+  status: submitted
   plan: free
   launch_date: null
   listing_url: https://fazier.com/launches/dailyhook.top
-  upvote: true
+  upvote: at_launch
   badge: null
+  next_action: 'listing page exists but the Upvote button is disabled until Fazier approves/launches it (free tier: reviewed within 30 days)'
 - platform: turbo0
   status: submitted
   plan: free

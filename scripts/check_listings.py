@@ -41,9 +41,12 @@ async def check(ctx, sem, l, name):
             txt = await p.evaluate("(document.querySelector('main')||document.body).innerText")
             has_name = re.search(re.escape(name), txt, re.I) is not None
             l['live'] = bool(r and r.status < 400 and has_name)
-            btns = await p.evaluate("""(re) => [...document.querySelectorAll('button,a,[role=button]')].filter(e=>e.offsetParent)
-                .map(e=>((e.getAttribute('aria-label')||'')+' '+e.innerText).replace(/\\s+/g,' ').trim())
-                .filter(t=>new RegExp(re,'i').test(t) && !/customer support/i.test(t) && t.length<60)""", VOTE_RE)
+            raw = await p.evaluate("""(re) => [...document.querySelectorAll('button,a,[role=button]')].filter(e=>e.offsetParent)
+                .map(e=>({t: ((e.getAttribute('aria-label')||'')+' '+e.innerText).replace(/\\s+/g,' ').trim(),
+                          off: !!(e.disabled || e.getAttribute('aria-disabled')==='true')}))
+                .filter(o=>new RegExp(re,'i').test(o.t) && !/customer support/i.test(o.t) && o.t.length<60)""", VOTE_RE)
+            btns = [o['t'] for o in raw]
+            disabled = {o['t'] for o in raw if o['off']}
             # drop vote buttons that belong to *other* products listed on the page ("Upvote Foo", "Squeeze Foo")
             def other(b):
                 m = re.search(r'(?i:up-?vote|squeeze|vote for)\s+(?!this\b|•|—|-|\d)([A-Z][\w.+-]*)', b)
@@ -51,7 +54,11 @@ async def check(ctx, sem, l, name):
             own = [b for b in btns if not other(b)]
             nums = [int(n) for b in own for n in re.findall(r'\b(\d{1,4})\b', b) if int(n) < 1900]
             m = re.search(r'\b(\d{1,4})\s*(?:up)?votes?\b', txt[:3000], re.I)
-            l['upvote'] = bool(own) or bool(re.search(r'upvotes? (open|unlock)', txt, re.I))
+            # a vote button that exists but is disabled (for everyone, logged out too) = voting not open yet
+            if own and any(b in disabled for b in own):
+                l['upvote'] = 'at_launch'
+            else:
+                l['upvote'] = bool(own) or ('at_launch' if re.search(r'upvotes? (open|unlock)', txt, re.I) else False)
             l['votes'] = nums[0] if nums else (int(m.group(1)) if own and m and int(m.group(1)) < 1900 else None)
         except Exception as e:
             l['live'] = None

@@ -40,9 +40,9 @@
   kind: launch
   free: {requires: [comments:3, badge], wait: "reviewed within 30 days"}
   paid: "$29 Lite / $49 Premium"
-  votes: now
+  votes: at_launch
   listing: https://fazier.com/launches/{domain}
-  notes: "Free path: leave 3 thoughtful comments on other products (human), add badge, tick conditions, Verify Badge."
+  notes: "Free path: leave 3 thoughtful comments on other products (human), add badge, tick conditions, Verify Badge. The listing page is public right away, but its Upvote button stays disabled until the launch is approved."
   verified: 2026-10-06
 
 - id: openhunts
